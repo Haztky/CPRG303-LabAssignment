@@ -4,14 +4,10 @@ import { ToDoForm } from './ToDoForm';
 import { ToDoList } from './ToDoList';
 
 function App() {
-  const [tasks, setTasks] = useState([
-    'Do laundry',
-    'Go to gym',
-    'Walk dog',
-  ]);
+  const [tasks, setTasks] = useState(['Do laundry', 'Go to gym', 'Walk dog']);
 
-  const addTask = (task) => {
-    setTasks((prevTasks) => [...prevTasks, task]);
+  const addTask = (taskText) => {
+    setTasks(prevTasks => [...prevTasks, taskText]);
   };
 
   return (
@@ -30,5 +26,3 @@ const styles = StyleSheet.create({
 });
 
 export default App;
-
-
